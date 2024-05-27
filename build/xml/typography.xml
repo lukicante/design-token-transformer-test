@@ -1,0 +1,38 @@
+<resources>
+	<style name="extra-bold-condensed-italic" parent="Base.TextAppearance.TA">
+		<item name="fontWeight">ta_font_regular</item>    
+        <item name="textSize">12sp</item>    
+        <item name="fontFamily">@font/undefined</item>
+
+</style>
+	<style name="h3" parent="Base.TextAppearance.TA">
+		<item name="fontWeight">ta_font_regular</item>    
+        <item name="textSize">20sp</item>    
+        <item name="fontFamily">@font/undefined</item>
+
+</style>
+	<style name="h4-strike-through" parent="Base.TextAppearance.TA">
+		<item name="fontWeight">ta_font_regular</item>    
+        <item name="textSize">16sp</item>    
+        <item name="fontFamily">@font/undefined</item>
+
+</style>
+	<style name="italic" parent="Base.TextAppearance.TA">
+		<item name="fontWeight">ta_font_regular</item>    
+        <item name="textSize">12sp</item>    
+        <item name="fontFamily">@font/undefined</item>
+
+</style>
+	<style name="medium-extended-italic" parent="Base.TextAppearance.TA">
+		<item name="fontWeight">ta_font_regular</item>    
+        <item name="textSize">20sp</item>    
+        <item name="fontFamily">@font/undefined</item>
+
+</style>
+	<style name="super" parent="Base.TextAppearance.TA">
+		<item name="fontWeight">ta_font_regular</item>    
+        <item name="textSize">22sp</item>    
+        <item name="fontFamily">@font/undefined</item>
+
+</style>
+</resources>
