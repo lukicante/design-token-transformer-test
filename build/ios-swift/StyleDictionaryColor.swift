@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Thu, 16 May 2024 20:48:48 GMT
+// Generated on Mon, 27 May 2024 13:34:54 GMT
 
 
 import UIKit
@@ -18,4 +18,6 @@ public enum StyleDictionaryColor {
     public static let colorsSingleBlue = UIColor(red: 0.016, green: 0.290, blue: 1.000, alpha: 1)
     public static let colorsSpecialCharacters = UIColor(red: 0.251, green: 0.875, blue: 0.314, alpha: 1)
     public static let colorsSpecialCharactersNderung = UIColor(red: 0.204, green: 0.337, blue: 0.686, alpha: 1)
+    public static let primaryTabOverlay = #333333ff
+    public static let yellow80Background = #fee39aff
 }
