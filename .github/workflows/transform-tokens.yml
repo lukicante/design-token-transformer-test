@@ -29,6 +29,8 @@ jobs:
         env:
           DECOMPRESSED_DATA_BASE64: ${{ github.event.client_payload.tokens }}
       # this creates a json file from the stringified json from the request body
+      - name: print out global.tokens.json
+        run: cat tokens/global-ds.tokens.json
       - name: create json from request body
         id: create-json
         uses: jsdaniell/create-json@1.1.2
