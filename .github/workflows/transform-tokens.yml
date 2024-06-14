@@ -25,7 +25,7 @@ jobs:
 
       # Decompress the received payload and save it to a file
       - name: Decompress and save JSON file
-        run: 'node decompressJson.js'
+        run: 'node decompressJson.js && echo ${{ github.event.client_payload.data }}'
         env:
           DECOMPRESSED_DATA_BASE64: ${{ github.event.client_payload.data }}
       # this creates a json file from the stringified json from the request body
