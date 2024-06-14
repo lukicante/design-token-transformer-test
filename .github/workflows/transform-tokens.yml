@@ -24,8 +24,6 @@ jobs:
         run: npm install pako
 
       # Decompress the received payload and save it to a file
-      - name: Print client_payload
-        run: echo "${{ github.event.client_payload.tokens }}"
       - name: Decompress and save JSON file
         run: 'node decompressJson.js'
         env:

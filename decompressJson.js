@@ -19,8 +19,7 @@ const decompressedData = pako.inflate(uint8array, { to: 'string' });
 // Ensure decompressedData is populated
 if (decompressedData) {
     // Save decompressed data to a JSON file
-    console.log(decompressedData);
-    fs.writeFileSync('tokens/decompressed.json', decompressedData);
+    fs.writeFileSync('tokens/global-ds.tokens.json', decompressedData);
 } else {
     console.error('Decompressed data is undefined or empty.');
 }
