@@ -19,6 +19,26 @@ jobs:
       - name: mkdir "tokens" directory
         # change tokens here (and in line 32) if you want to use a differently named folder 
         run: 'mkdir -p tokens'
+          # Install pako for decompression
+      - name: Install pako
+        run: npm install pako
+
+      # Decompress the received payload and save it to a file
+      - name: Decompress and save JSON file
+        run: |
+              const pako = require('pako');
+              const fs = require('fs');
+              
+              // Example compressed data received as base64
+              const compressedData = "${{ github.event.client_payload.data }}";
+              
+              // Decode base64 and decompress
+              const decodedData = Buffer.from(compressedData, 'base64');
+              const decompressedData = pako.inflate(decodedData, { to: 'string' });
+              
+              // Save decompressed data to a JSON file
+              fs.writeFileSync('tokens/${{ github.event.client_payload.filename }}', decompressedData);
+
       # this creates a json file from the stringified json from the request body
       - name: create json from request body
         id: create-json
