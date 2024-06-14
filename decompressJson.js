@@ -2,7 +2,7 @@ const fs = require('fs');
 const pako = require('pako');
 
 // Example compressed data received as base64
-const compressedData = "${{ github.event.client_payload.data }}"; // Assuming data is base64 encoded
+const compressedData = process.env.DECOMPRESSED_DATA_BASE64; // Assuming data is base64 encoded
 
 console.log(compressedData);
 
