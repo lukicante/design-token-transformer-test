@@ -24,6 +24,20 @@ const normalizeColor = (colorString) => {
     return color.toHexString();
 };
 
+fs.readFile("tokens/global-ds.tokens.json", 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading the file:', err);
+        process.exit(1);
+    }
+
+    try {
+        const jsonData = JSON.parse(data);
+        console.log('File Contents:', jsonData);
+    } catch (parseError) {
+        console.error('Error parsing JSON:', parseError);
+    }
+});
+
 const truncateComponentVersionDescription = (description) => {
     const index = description?.lastIndexOf('---\n');
     if (index == null || index === -1) {
@@ -200,66 +214,6 @@ StyleDictionary.registerFormat({
         return resource
     }
 });
-
-/*
-StyleDictionary.extend({
-    ...deepMerge.all([androidConfig, webConfig]),
-    source: ["tokens/!*.json"],
-    platforms: {
-        android: {
-            transforms: [
-                'attribute/color',
-                'dimen'
-            ],
-            buildPath: "build/xml/",
-            files: [
-                {
-                    destination: 'brand.xml',
-                    format: 'android/xml',
-                    transform: 'attribute/color',
-                    filter: (token) => isColor(token) && isBrand(token),
-                },
-                {
-                    destination: 'breakpoints.xml',
-                    format: 'android/xml',
-                    transform: 'dimen',
-                    filter: isBreakpoint,
-                },
-                {
-                    destination: 'lightmode.xml', // Output file name
-                    format: 'android/xml',
-                    transform: 'attribute/color',
-                    filter: (token) => (isColor(token) || isGradient(token)) && isLightmode(token) && !isBrand(token),
-                },
-                {
-                    destination: 'darkmode.xml',
-                    format: 'android/xml',
-                    transform: 'attribute/color',
-                    filter: (token) =>
-                        (isColor(token) || isGradient(token)) && isDarkmode(token) && !isBrand(token),
-                },
-                {
-                    destination: 'typography.xml',
-                    format: 'android/xml',
-                    filter: isFont,
-                },
-                {
-                    destination: 'radii.xml',
-                    format: 'android/xml',
-                    transform: 'dimen',
-                    filter: isRadius,
-                },
-                {
-                    destination: 'spacing.xml',
-                    format: 'android/xml',
-                    filter: isSpacing,
-                },
-            ],
-        },
-    },
-}).buildAllPlatforms();
-*/
-
 
 StyleDictionary.registerTransform({
   name: 'size/px',
@@ -469,7 +423,5 @@ const StyleDictionaryExtended = StyleDictionary.extend({
     },
   },
 });
-console.log('StyleDictionaryExtended', StyleDictionaryExtended)
-
 
 StyleDictionaryExtended.buildAllPlatforms()
