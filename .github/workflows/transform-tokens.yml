@@ -50,7 +50,7 @@ jobs:
           git config --global user.email "alukic@tripadvisor.com"
           
           # Add the target repository as a remote
-          git remote add target https://$GITHUB_TOKEN@github.com/$TARGET_REPO.git
+          git remote add target https://x-access-token:$GITHUB_TOKEN@github.com/$TARGET_REPO
           
           # Create a new branch
           git checkout -b $BRANCH_NAME
