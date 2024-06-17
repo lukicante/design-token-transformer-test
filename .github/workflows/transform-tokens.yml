@@ -38,34 +38,18 @@ jobs:
       - name: Transform design tokens 
         run: 'node transformTokens.js'
       # We now create a pull request 
-      - name: Commit and Push Changes to Target Repository
+      - name: Create pull request
+        uses: MDRCNY/MDRCNY-Actions-CPR@v1.0.1
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          TARGET_REPO: "lukicante/design-token-Android-test-repo" # Specify the target repository here
-        run: |
-          BRANCH_NAME="generated-code-branch"
-          COMMIT_MESSAGE="Add generated code"
-          
-          git config --global user.name "Ante Lukic"
-          git config --global user.email "alukic@tripadvisor.com"
-          
-          # Add the target repository as a remote
-          git remote add target https://x-access-token:$GITHUB_TOKEN@github.com/$TARGET_REPO
-          
-          # Create a new branch
-          git checkout -b $BRANCH_NAME
-          
-          # Add and commit generated code
-          git add .
-          git commit -m "$COMMIT_MESSAGE"
-          
-          # Push to the new branch in the target repository
-          git push -u target $BRANCH_NAME
-
-      - name: Create Pull Request in Target Repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          TARGET_REPO: "target-username/target-repo" # Specify the target repository here
-        run: |
-          gh auth login --with-token <<< $GITHUB_TOKEN
-          gh pr create --title "$COMMIT_MESSAGE" --body "Generated code pull request" --head $BRANCH_NAME --repo $TARGET_REPO --base main
+          API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
+        with:
+          source_folder: 'tokens'
+          destination_repo: 'lukicante/design-token-Android-test-repo'
+          destination_folder: 'build'
+          destination_base_branch: 'main'
+          destination_head_branch: 'design-tokens'
+          user_email: 'alukic@tripadvisor.com'
+          user_name: 'alukic'
+          pull_request_reviewers: 'alukic'
+          title: 'Design Tokens Update'
+          body: 'Design tokens updated in Figma'
