@@ -43,11 +43,11 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
         with:
-          source_folder: 'tokens'
+          source_folder: 'build/xml'
           destination_repo: 'lukicante/design-token-Android-test-repo'
-          destination_folder: 'build/xml'
+          destination_folder: 'tokens'
           destination_base_branch: 'main'
-          destination_head_branch: 'design-tokens'
+          destination_head_branch: 'design-tokens-android'
           user_email: 'alukic@tripadvisor.com'
           user_name: 'alukic'
           pull_request_reviewers: 'alukic'
