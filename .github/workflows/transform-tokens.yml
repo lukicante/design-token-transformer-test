@@ -51,13 +51,31 @@ jobs:
       - name: Transform design tokens 
         run: 'node transformTokens.js'
       # We now create a pull request 
-      - name: Create PR 
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: ${{ github.event.client_payload.commitMessage || 'Tokens updated' }}
-          title: "Design tokens updated"
-          body: "Design tokens have been updated via Figma and need to be reviewed."
+      - name: Commit and Push Changes to Target Repository
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # this parameter is optional and defaults to master but I am using main
-          BRANCH_NAME: 'main'
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          TARGET_REPO: "lukicante/design-token-Android-test-repo" # Specify the target repository here
+        run: |
+          BRANCH_NAME="generated-code-branch"
+          COMMIT_MESSAGE="Add generated code"
+          
+          # Add the target repository as a remote
+          git remote add target https://github.com/$TARGET_REPO.git
+          
+          # Create a new branch
+          git checkout -b $BRANCH_NAME
+          
+          # Add and commit generated code
+          git add .
+          git commit -m "$COMMIT_MESSAGE"
+          
+          # Push to the new branch in the target repository
+          git push -u target $BRANCH_NAME
+
+      - name: Create Pull Request in Target Repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          TARGET_REPO: "target-username/target-repo" # Specify the target repository here
+        run: |
+          gh auth login --with-token <<< $GITHUB_TOKEN
+          gh pr create --title "$COMMIT_MESSAGE" --body "Generated code pull request" --head $BRANCH_NAME --repo $TARGET_REPO --base main
