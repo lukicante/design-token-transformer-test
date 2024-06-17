@@ -45,7 +45,7 @@ jobs:
         with:
           source_folder: 'tokens'
           destination_repo: 'lukicante/design-token-Android-test-repo'
-          destination_folder: 'build'
+          destination_folder: 'build/xml'
           destination_base_branch: 'main'
           destination_head_branch: 'design-tokens'
           user_email: 'alukic@tripadvisor.com'
