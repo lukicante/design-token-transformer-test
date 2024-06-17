@@ -28,19 +28,6 @@ jobs:
         run: 'node decompressJson.js'
         env:
           DECOMPRESSED_DATA_BASE64: ${{ github.event.client_payload.tokens }}
-      # this creates a json file from the stringified json from the request body
-      - name: print out global.tokens.json
-        run: cat tokens/global-ds.tokens.json
-      - name: create json from request body
-        id: create-json
-        uses: jsdaniell/create-json@1.1.2
-        with:
-          # it uses the figma filename that was send as then filename parameter
-          name: ${{ github.event.client_payload.filename }}
-          # it uses the json string that was send as the tokens parameter
-          json: ${{ github.event.client_payload.tokens }}
-          # it uses the directory named "tokens" to store this json file (change this if you changed it above to use a different folder)
-          dir: 'tokens'
       # we now initialize node to run amazon style dictionary to compile the tokens
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
