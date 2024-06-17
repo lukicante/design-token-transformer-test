@@ -1,0 +1,5 @@
+<resources>
+	<dimen name="lg">1280dp</dimen>
+	<dimen name="md">1024dp</dimen>
+	<dimen name="sm">768dp</dimen>
+</resources>

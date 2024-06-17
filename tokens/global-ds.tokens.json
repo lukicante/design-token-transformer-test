@@ -1,0 +1,530 @@
+{
+  "primitives": {
+    "spacing": {
+      "1": {
+        "type": "dimension",
+        "value": 8,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295561",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "2": {
+        "type": "dimension",
+        "value": 16,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295575",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "3": {
+        "type": "dimension",
+        "value": 24,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295563",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "4": {
+        "type": "dimension",
+        "value": 32,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295564",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "5": {
+        "type": "dimension",
+        "value": 48,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295565",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "6": {
+        "type": "dimension",
+        "value": 56,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295566",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "8": {
+        "type": "dimension",
+        "value": 64,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295567",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "10": {
+        "type": "dimension",
+        "value": 80,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295568",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "12": {
+        "type": "dimension",
+        "value": 96,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295569",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "45": {
+        "type": "dimension",
+        "value": 40,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:128519:7103",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "half": {
+        "type": "dimension",
+        "value": 4,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112684:295560",
+            "exportKey": "variables"
+          }
+        }
+      }
+    },
+    "radius": {
+      "full": {
+        "type": "dimension",
+        "value": 100,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112685:295583",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "small": {
+        "type": "dimension",
+        "value": 4,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112685:295584",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "medium": {
+        "type": "dimension",
+        "value": 6,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112685:295585",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "large": {
+        "type": "dimension",
+        "value": 8,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:112685:295586",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "xl": {
+        "type": "dimension",
+        "value": 12,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Primitives",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:118523:18528",
+            "exportKey": "variables"
+          }
+        }
+      }
+    }
+  },
+  "tokens": {
+    "spacing": {
+      "spacing01": {
+        "type": "dimension",
+        "value": "{primitives.spacing.half}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295572",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing02": {
+        "type": "dimension",
+        "value": "{primitives.spacing.1}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295573",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing03": {
+        "type": "dimension",
+        "value": "{primitives.spacing.2}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295574",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing04": {
+        "type": "dimension",
+        "value": "{primitives.spacing.3}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295576",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing05": {
+        "type": "dimension",
+        "value": "{primitives.spacing.4}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295577",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing06": {
+        "type": "dimension",
+        "value": "{primitives.spacing.5}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295578",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing07": {
+        "type": "dimension",
+        "value": "{primitives.spacing.6}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295579",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing08": {
+        "type": "dimension",
+        "value": "{primitives.spacing.8}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295580",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing09": {
+        "type": "dimension",
+        "value": "{primitives.spacing.10}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295581",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing10": {
+        "type": "dimension",
+        "value": "{primitives.spacing.12}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:112684:295582",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "spacing055": {
+        "type": "dimension",
+        "value": "{primitives.spacing.45}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "GAP"
+            ],
+            "variableId": "VariableID:128519:7104",
+            "exportKey": "variables"
+          }
+        }
+      }
+    },
+    "radius": {
+      "radiusFullRounded": {
+        "description": "Interactive components like Chips and Buttons.",
+        "type": "dimension",
+        "value": "{primitives.radius.full}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:112685:295587",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "radiusSmall": {
+        "description": "Use for non-interactive components (not images) like Merchandising Labels, Status Labels, and Tags.",
+        "type": "dimension",
+        "value": "{primitives.radius.small}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:112685:295588",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "radiusMedium": {
+        "description": "The medium radius is for medium sized assets.   Cards or components that have images that do not take up the full-width of the card but are horizontally aligned next to other content.\n\nExamples: Horizontal Cards, List Items, Booking Cards, Typeahead Images (including icon containers), images inside of Reviews.",
+        "type": "dimension",
+        "value": "{primitives.radius.medium}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:112685:295589",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "radiusLarge": {
+        "description": "The large radius is for larger sized assets.   Cards or components that have full-width images (excluding full-bleed cards like the full width feature cards & inset image feature cards)\n\nExamples: Vertical Cards, Stylized Prompt Cards, Image background cards",
+        "type": "dimension",
+        "value": "{primitives.radius.large}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:112685:295590",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "radiusXl": {
+        "type": "dimension",
+        "value": "{primitives.radius.xl}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:118511:4662",
+            "exportKey": "variables"
+          }
+        }
+      }
+    },
+    "yellow80Background": {
+      "type": "color",
+      "value": "#fee39aff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "mode": "Mode 1",
+          "collection": "Tokens",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "variableId": "VariableID:120310:3567",
+          "exportKey": "variables"
+        }
+      }
+    },
+    "primaryTabOverlay": {
+      "type": "color",
+      "value": "#333333ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "mode": "Mode 1",
+          "collection": "Tokens",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "variableId": "VariableID:125529:10626",
+          "exportKey": "variables"
+        }
+      }
+    }
+  }
+}

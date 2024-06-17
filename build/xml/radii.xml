@@ -1,0 +1,8 @@
+<resources>
+	<dimen name="5">[object Object]</dimen>
+	<dimen name="radiusFullRounded">100dp</dimen>
+	<dimen name="radiusLarge">8dp</dimen>
+	<dimen name="radiusMedium">6dp</dimen>
+	<dimen name="radiusSmall">4dp</dimen>
+	<dimen name="radiusXl">12dp</dimen>
+</resources>
