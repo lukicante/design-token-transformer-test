@@ -46,6 +46,9 @@ jobs:
           BRANCH_NAME="generated-code-branch"
           COMMIT_MESSAGE="Add generated code"
           
+          git config --global user.name "Ante Lukic"
+          git config --global user.email "alukic@tripadvisor.com"
+          
           # Add the target repository as a remote
           git remote add target https://github.com/$TARGET_REPO.git
           
