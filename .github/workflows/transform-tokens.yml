@@ -19,7 +19,7 @@ jobs:
       - name: mkdir "tokens" directory
         # change tokens here (and in line 32) if you want to use a differently named folder 
         run: 'mkdir -p tokens'
-          # Install pako for decompression
+        # Install pako for decompression
       - name: Install pako
         run: npm install pako
 
@@ -41,6 +41,11 @@ jobs:
           json: ${{ github.event.client_payload.tokens }}
           # it uses the directory named "tokens" to store this json file (change this if you changed it above to use a different folder)
           dir: 'tokens'
+  generateTokens:
+    runs-on: ubuntu-latest
+    needs: build
+    name: Generate tokens
+    steps:
       # we now initialize node to run amazon style dictionary to compile the tokens
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
@@ -48,34 +53,39 @@ jobs:
           # we use version 14.x of node
           node-version: 14.x
       # We now run npm i to install all dependencies and run the "transfrom" script that is defined in the package.json (change this if you need to)
-      - name: Transform design tokens 
+      - name: Transform design tokens
         run: 'node transformTokens.js'
-      # We now create a pull request 
-      - name: Commit and Push Changes to Target Repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          TARGET_REPO: "lukicante/design-token-Android-test-repo" # Specify the target repository here
-        run: |
-          BRANCH_NAME="generated-code-branch"
-          COMMIT_MESSAGE="Add generated code"
-          
-          # Add the target repository as a remote
-          git remote add target https://github.com/$TARGET_REPO.git
-          
-          # Create a new branch
-          git checkout -b $BRANCH_NAME
-          
-          # Add and commit generated code
-          git add .
-          git commit -m "$COMMIT_MESSAGE"
-          
-          # Push to the new branch in the target repository
-          git push -u target $BRANCH_NAME
+  createPR:
+    runs-on: ubuntu-latest
+    name: Create PR
+    needs: generateTokens
+    steps:
+      # We now create a pull request
+    - name: Commit and Push Changes to Target Repository
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        TARGET_REPO: "lukicante/design-token-Android-test-repo"
+      run: |
+        BRANCH_NAME="generated-code-branch"
+        COMMIT_MESSAGE="Add generated code"
 
-      - name: Create Pull Request in Target Repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          TARGET_REPO: "target-username/target-repo" # Specify the target repository here
-        run: |
+        # Add the target repository as a remote
+        git remote add target https://github.com/$TARGET_REPO.git
+
+        # Create a new branch
+        git checkout -b $BRANCH_NAME
+
+        # Add and commit generated code
+        git add .
+        git commit -m "$COMMIT_MESSAGE"
+
+        # Push to the new branch in the target repository
+        git push -u target $BRANCH_NAME
+
+    - name: Create Pull Request in Target Repository
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        TARGET_REPO: "target-username/target-repo" # Specify the target repository here
+      run: |
           gh auth login --with-token <<< $GITHUB_TOKEN
           gh pr create --title "$COMMIT_MESSAGE" --body "Generated code pull request" --head $BRANCH_NAME --repo $TARGET_REPO --base main
